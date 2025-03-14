@@ -1,0 +1,142 @@
+/* Definindo variáveis de cores */
+:root {
+  --rosa-claro: #FAD0C4;
+  --azul-claro: #A2DFF7;
+  --rosa-escuro: #F28D8D;
+  --azul-escuro: #6BB9F0;
+  --branco: #FFFFFF;
+  --cinza-claro: #F5F5F5;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando o corpo da página */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--cinza-claro);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--rosa-claro);
+  color: #333;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--sombra);
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Galeria de produtos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.item {
+  background-color: var(--branco);
+  border: 1px solid var(--sombra);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--sombra);
+  margin: 15px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--sombra);
+}
+
+.item img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.item h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5em;
+  color: var(--rosa-escuro);
+  margin: 10px 0;
+}
+
+.item p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+button {
+  background-color: var(--azul-claro);
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--rosa-claro);
+  color: #333;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px var(--sombra);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Elementos decorativos */
+body::before {
+  content: '';
+  background-image: url('caminho/para/padrao-rosas.png'); /* Imagem de fundo com padrão de rosas */
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header::after {
+  content: url('caminho/para/hatsune-miku.png'); /* Imagem da Hatsune Miku */
+  display: block;
+  margin: 10px auto 0;
+  width: 100px;
+  height: auto;
+}
+
+/* Efeitos de brilho */
+.item img {
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+.item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px var(--sombra);
+  filter: brightness(1.2);
+}
